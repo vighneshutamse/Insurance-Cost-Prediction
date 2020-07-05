@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Cost Prediction</title>
+</head>
+
+<center>
+<body>
+
+    <div style="color:black">
+	<h1>Calculate your Insurance Cost</h1>
+        <form action="{{ url_for('predict')}}" method="post">
+			<table width="450px">
+				<tr>
+					<td>
+						<h3>Age (in years): </h3>
+					</td>
+					<td>
+						<input id="age" name="age" type="number" min="1">
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<h3>Gender: </h3>
+					</td>
+					<td>
+						<select name="gender" id="gender" required="required">
+							<option value="1">Male</option>
+							<option value="0">Female</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<h3>Body Mass Index (BMI): </h3>
+					</td>
+					<td>
+						<input id="bmi" name="bmi" type="number" required="required">
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<h3>Number of children: </h3>
+					</td>
+					<td>
+						<select id="children" name="children" required="required">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<h3>Do you smoke? </h3>
+					</td>
+					<td>
+						<select name="smoker" id="smoker" required="required">
+							<option value="1">Yes</option>
+							<option value="0">No</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<h3>Which region are you from? </h3>
+					</td>
+					<td>
+						<select name="region" id="region" required="required">
+							<option value="2">Southeast</option>
+							<option value="3">Southwest</option>
+							<option value="4">Northeast</option>
+							<option value="1">Northwest</option>
+						</select>
+					</td>
+				</tr>
+				
+				<tr>
+					<td>
+						<button type="submit" name="Submit"  id="sub">Submit</button>
+					</td>
+				</tr>
+				
+		</form>	
+
+	</div>
+
+	<style>
+        body {
+			background:darkblue;
+            text-align: center;
+            padding: 0px;
+        }
+		
+		h1 {
+			text-align: center;
+			font-size: 50px;
+			color: lightblue;
+			-webkit-text-stroke: 1px black;
+			text-shadow: 1px 2px 2px #000,
+						2px 2px 2px #000,
+						2px -1px 0 #000,
+						1px -1px 0 #000;
+		}
+		
+		form {
+			margin: 10px auto;
+			width: 600px;
+			height: 500px;
+			color: black;
+			border: 2px black solid;
+			background-color: lightblue;
+			border-radius: 10px;
+			box-shadow: 3px 3px black
+		}
+		
+		input {
+			padding: 5px;
+			font-size: inherit;
+			width=100%;
+		}
+		
+		input:hover {
+			background-color: yellow;
+		}
+        
+		select {
+			padding: 5px;
+			font-size: inherit;
+			width: 190px;
+			selected: False;
+			border:2px solid black;
+			border-radius: 5px;
+		}
+		
+		select:hover {
+			background-color: yellow;
+		}
+		
+		input[type="number"] {
+			display: block;
+			border:2px solid black;
+			border-radius: 5px;
+		}
+		
+        button {
+			width: 100px;
+			height: 45px;
+			font-weight: normal;
+			font-size: 20px;
+			margin-top: 55px;
+			margin-left: 180px;
+			border:2px solid black;
+			border-radius: 5px;
+		}
+		
+    </style>
+</body>		
+</center>				
