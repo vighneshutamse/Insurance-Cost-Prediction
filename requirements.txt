@@ -16,7 +16,7 @@ pytz==2020.1
 cycler==0.10.0
 certifi==2020.6.20
 kiwisolver
-wheel==0.32.3
+wheel==0.38.1
 jsonify
 pickle-mixin
 itsdangerous==1.1.0
