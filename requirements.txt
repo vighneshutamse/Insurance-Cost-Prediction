@@ -21,7 +21,7 @@ jsonify
 pickle-mixin
 itsdangerous==1.1.0
 MarkupSafe==1.1.1
-Werkzeug==1.0.1
+Werkzeug==2.2.3
 requests
 wincertstore
 setuptools==40.6.3
